@@ -187,6 +187,7 @@
         // Check if height and weight values are valid
         if (height.value == '' || weight.value == '') {
             output.innerHTML = "Please enter valid height and weight values.";
+            output.style.color = "red";
             height.style.border = "3px solid red";
             weight.style.border = "3px solid red";
             return;
@@ -194,6 +195,7 @@
         let bmi = finalWeight / (finalHeight ** 2);
 
         output.innerHTML = `Your BMI is ${bmi.toFixed(1)}`;
+        output.style.color = "#fff";
         height.style.border = "3px solid #fff";
         weight.style.border = "3px solid #fff";
 
@@ -214,6 +216,7 @@
         weight.value = "";
         height.value = "";
         output.innerHTML = "";
+        output.style.color = "#fff";
         height.style.border = "3px solid #fff";
         weight.style.border = "3px solid #fff";
     }
